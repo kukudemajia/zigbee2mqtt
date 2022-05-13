@@ -1,6 +1,8 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  #防止fork乱用action设置只能手动触发构建
+  workflow_dispatch:
 
 jobs:
   ci:
